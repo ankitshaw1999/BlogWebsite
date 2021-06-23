@@ -1,0 +1,17 @@
+<%- include("partials/header"); -%>
+
+  <h1><%=title%></h1>
+  <p><%=content%></p>
+  <form class="editButt" action="/editPost" method="post">
+    <input type="hidden" name="postId" value="<%=id%>">
+    <button class="btn btn-outline-info" type="submit" name="submit">Edit</button>
+  </form>
+  
+  <form class="deleteButt" action="/deletePost" method="post">
+    <input type="hidden" name="deleteId" value="<%=id%>">
+    <button class="btn btn-danger" type="submit">Delete</button>
+  </form>
+  
+
+
+<%- include("partials/footer"); -%>
